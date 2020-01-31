@@ -41,4 +41,10 @@ public class Aide implements Serializable {
 		this.contenu = contenu;
 	} //end ctor chargé sans ID
 
+	/* toString */
+	@Override
+	public String toString() {
+		return "Aide [idAide=" + idAide + ", page=" + page + ", contenu=" + contenu + "]";
+	} //end toString
+	
 } //end class
