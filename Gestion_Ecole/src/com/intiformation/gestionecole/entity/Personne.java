@@ -16,22 +16,22 @@ public class Personne implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_personne")
-	private long idPersonne;
+	protected long idPersonne;
 	
 	@Column(name="identifiant")
-	private String identifiant;
+	protected String identifiant;
 	
 	@Column(name="motdepasse")
-	private String motDePasse;
+	protected String motDePasse;
 	
 	@Column(name="nom")
-	private String nom; 
+	protected String nom; 
 	
 	@Column(name="prenom")
-	private String prenom;
+	protected String prenom;
 	
 	@Column(name="email")
-	private String email;
+	protected String email;
 
 	/* Constructeurs */
 	//Constructeur vide

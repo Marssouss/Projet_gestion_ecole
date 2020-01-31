@@ -26,19 +26,19 @@ public class Aide implements Serializable {
 
 	/* Constructeurs */
 	//Constructeur vide
-	protected Aide() {
+	public Aide() {
 		
 	} //end ctor vide
 
 	//Constructeur chargé toutes infos
-	protected Aide(Long idAide, int page, String contenu) {
+	public Aide(Long idAide, int page, String contenu) {
 		this.idAide = idAide;
 		this.page = page;
 		this.contenu = contenu;
 	} //end ctor chargé toutes infos
 
 	//Constructeur chargé sans ID
-	protected Aide(int page, String contenu) {
+	public Aide(int page, String contenu) {
 		this.page = page;
 		this.contenu = contenu;
 	} //end ctor chargé sans ID
