@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="aide")
+@Table(name="aides")
 public class Aide implements Serializable {
 	/* Propriétés */
 	@Id

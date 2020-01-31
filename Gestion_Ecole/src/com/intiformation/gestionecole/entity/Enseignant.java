@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="enseignant")
+@Table(name="enseignants")
 public class Enseignant extends Personne implements Serializable {
 	/* Propriétés */
 	@Id
