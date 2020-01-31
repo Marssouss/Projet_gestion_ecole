@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="Gestion_Ecole">
+		<!-- Déclaration du fournisseur de persistance (provider) -->
+		<!-- Provider: Implémentation concrète de JPA (eclipselink) -->
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<!-- Décalration des classes entités -->
+	
+		
+		<!-- Définition des propriétés JPA pour la configuration -->
+		<properties>
+			<!-- 1. Propriétés pour définir les informations de connexion à la BDD -->
+			<property name="javax.persistence.jdbc.url" 
+					  value="jdbc:mysql://localhost:3306/db_gestion_ecole"/>	  
+			<property name="javax.persistence.jdbc.user" value="root"/>        
+			<property name="javax.persistence.jdbc.password" value="root"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			
+			<!-- 2. Propriété JPA pour définir la stratégie de génération des tables dans la BDD -->
+			<property name="javax.persistence.schema-generation.database.action" value="create"/>
+			
+			<!-- Propriété de eclipselink pour l'affichage des requêtes SQL dans la console -->
+			<!-- Valeurs: FINE // OFF // CONFIG // WARN // INFO  -->
+			<property name="eclipselink.logging.level" value="FINE"/>
+	
 	</persistence-unit>
 </persistence>
