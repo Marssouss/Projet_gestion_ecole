@@ -8,6 +8,7 @@
 		<!-- Décalration des classes entités -->
 		<class>com.intiformation.gestionecole.entity.Personne</class>
 		<class>com.intiformation.gestionecole.entity.Aide</class>
+		<class>com.intiformation.gestionecole.entity.Adresse</class>
 	
 		
 		<!-- Définition des propriétés JPA pour la configuration -->
