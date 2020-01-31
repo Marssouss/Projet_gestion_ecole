@@ -43,13 +43,15 @@ public class Etudiant extends Personne implements Serializable {
 		this.dateDeNaissance = dateDeNaissance;
 	} //End ctor chargé sans ID
 
+
 	/* toString */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Etudiant [idEtudiant=" + idEtudiant + "]";
-	}	
-
+		return "Etudiant [idEtudiant=" + idEtudiant + ", " + (photo != null ? "photo=" + photo + ", " : "")
+				+ (dateDeNaissance != null ? "dateDeNaissance=" + dateDeNaissance : "") + "]";
+	}
+		
 } //end class

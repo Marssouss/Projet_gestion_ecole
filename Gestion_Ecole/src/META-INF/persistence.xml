@@ -12,6 +12,7 @@
 		<class>com.intiformation.gestionecole.entity.Enseignant</class>
 		<class>com.intiformation.gestionecole.entity.Administrateur</class>
 		<class>com.intiformation.gestionecole.entity.Etudiant</class>
+		<class>com.intiformation.gestionecole.entity.Cours</class>
 	
 		
 		<!-- Définition des propriétés JPA pour la configuration -->
