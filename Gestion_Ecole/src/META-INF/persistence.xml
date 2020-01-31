@@ -16,6 +16,7 @@
 		<class>com.intiformation.gestionecole.entity.Matiere</class>
 		<class>com.intiformation.gestionecole.entity.Promotion</class>
 		<class>com.intiformation.gestionecole.entity.EtudiantCours</class>
+		<class>com.intiformation.gestionecole.entity.Enseigner</class>
 	
 		
 		<!-- Définition des propriétés JPA pour la configuration -->

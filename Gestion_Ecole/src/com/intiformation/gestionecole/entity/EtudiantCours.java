@@ -52,6 +52,77 @@ public class EtudiantCours implements Serializable {
 		this.coursId = coursId;
 		this.etudiantId = etudiantId;
 	} //end ctor chargé sans ID
+	
+	/* Getters & Setters */
+	/**
+	 * @return the idEtudiantCours
+	 */
+	public long getIdEtudiantCours() {
+		return idEtudiantCours;
+	}
+
+	/**
+	 * @param idEtudiantCours the idEtudiantCours to set
+	 */
+	public void setIdEtudiantCours(long idEtudiantCours) {
+		this.idEtudiantCours = idEtudiantCours;
+	}
+
+	/**
+	 * @return the absence
+	 */
+	public boolean isAbsence() {
+		return absence;
+	}
+
+	/**
+	 * @param absence the absence to set
+	 */
+	public void setAbsence(boolean absence) {
+		this.absence = absence;
+	}
+
+	/**
+	 * @return the motif
+	 */
+	public String getMotif() {
+		return motif;
+	}
+
+	/**
+	 * @param motif the motif to set
+	 */
+	public void setMotif(String motif) {
+		this.motif = motif;
+	}
+
+	/**
+	 * @return the coursId
+	 */
+	public long getCoursId() {
+		return coursId;
+	}
+
+	/**
+	 * @param coursId the coursId to set
+	 */
+	public void setCoursId(long coursId) {
+		this.coursId = coursId;
+	}
+
+	/**
+	 * @return the etudiantId
+	 */
+	public long getEtudiantId() {
+		return etudiantId;
+	}
+
+	/**
+	 * @param etudiantId the etudiantId to set
+	 */
+	public void setEtudiantId(long etudiantId) {
+		this.etudiantId = etudiantId;
+	}
 
 	/* toString */
 	/* (non-Javadoc)
