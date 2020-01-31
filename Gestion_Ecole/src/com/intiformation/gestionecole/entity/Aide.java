@@ -7,14 +7,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="aide")
 public class Aide implements Serializable {
 	/* Propriétés */
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_aide")
-	private Long idAide;
+	private long idAide;
 	
 	@Column(name="page")
 	private int page;
