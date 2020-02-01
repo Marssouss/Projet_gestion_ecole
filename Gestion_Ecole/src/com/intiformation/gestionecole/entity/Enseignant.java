@@ -29,14 +29,18 @@ public class Enseignant extends Personne implements Serializable {
 	} //end ctor vide
 
 	//Constructeur chargé
-	public Enseignant(long idEnseignant) {
+
+	public Enseignant(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
+			long idEnseignant) {
+		super(idPersonne, identifiant, motDePasse, nom, prenom, email);
 		this.idEnseignant = idEnseignant;
-	} //end ctor chargé
+	}//end ctor chargé
 
 	/* Getters & Setters */
 	public long getIdEnseignant() {
 		return idEnseignant;
 	}
+
 
 	public void setIdEnseignant(long idEnseignant) {
 		this.idEnseignant = idEnseignant;

@@ -44,6 +44,14 @@ public class Etudiant extends Personne implements Serializable {
 	} //End ctor chargé sans ID
 
 
+	public Etudiant(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
+			long idEtudiant, String photo, Date dateDeNaissance) {
+		super(idPersonne, identifiant, motDePasse, nom, prenom, email);
+		this.idEtudiant = idEtudiant;
+		this.photo = photo;
+		this.dateDeNaissance = dateDeNaissance;
+	}
+
 	/* toString */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

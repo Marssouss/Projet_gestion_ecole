@@ -26,9 +26,11 @@ public class Administrateur extends Personne implements Serializable {
 	} //end ctor vide
 
 	//Constructeur chargé
-	public Administrateur(long idAdministrateur) {
+	public Administrateur(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom,
+			String email, long idAdministrateur) {
+		super(idPersonne, identifiant, motDePasse, nom, prenom, email);
 		this.idAdministrateur = idAdministrateur;
-	} //end ctor chargé
+	}
 
 	/* toString */
 	@Override
