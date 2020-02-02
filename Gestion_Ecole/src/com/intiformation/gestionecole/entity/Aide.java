@@ -19,7 +19,7 @@ public class Aide implements Serializable {
 	private long idAide;
 	
 	@Column(name="page")
-	private int page;
+	private String page;
 	
 	@Column(name="contenu")
 	private String contenu;
@@ -31,17 +31,45 @@ public class Aide implements Serializable {
 	} //end ctor vide
 
 	//Constructeur chargé toutes infos
-	public Aide(Long idAide, int page, String contenu) {
+	public Aide(Long idAide, String page, String contenu) {
 		this.idAide = idAide;
 		this.page = page;
 		this.contenu = contenu;
 	} //end ctor chargé toutes infos
 
 	//Constructeur chargé sans ID
-	public Aide(int page, String contenu) {
+	public Aide(String page, String contenu) {
 		this.page = page;
 		this.contenu = contenu;
 	} //end ctor chargé sans ID
+
+	
+	
+	
+	
+	public long getIdAide() {
+		return idAide;
+	}
+
+	public void setIdAide(long idAide) {
+		this.idAide = idAide;
+	}
+
+	public String getPage() {
+		return page;
+	}
+
+	public void setPage(String page) {
+		this.page = page;
+	}
+
+	public String getContenu() {
+		return contenu;
+	}
+
+	public void setContenu(String contenu) {
+		this.contenu = contenu;
+	}
 
 	/* toString */
 	@Override

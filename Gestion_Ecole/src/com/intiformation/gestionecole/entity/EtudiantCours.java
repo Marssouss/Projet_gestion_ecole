@@ -2,15 +2,18 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="etudiant_cours")
+@Table(name="etudiants_cours")
 public class EtudiantCours implements Serializable {
 	/* Propriétés */
 	@Id
@@ -24,11 +27,13 @@ public class EtudiantCours implements Serializable {
 	@Column(name="motif")
 	private String motif;
 	
-	@Column(name="cours_id")
-	private long coursId;
+	@OneToOne(cascade=CascadeType.PERSIST)//Ajout en cascade, suppr en cascade....
+	@JoinColumn(name="cours_id",referencedColumnName="idCours")//Gestion de la FK	
+	private Cours cours;
 	
-	@Column(name="etudiant_id")
-	private long etudiantId;
+	@OneToOne(cascade=CascadeType.PERSIST)//Ajout en cascade, suppr en cascade....
+	@JoinColumn(name="etudiant_id",referencedColumnName="idEtudiant")//Gestion de la FK	
+	private Etudiant etudiant;
 
 	/* Constructeurs */
 	//Constructeur vide
@@ -37,20 +42,20 @@ public class EtudiantCours implements Serializable {
 	} //end ctor vide
 
 	//Constructeur chargé total
-	public EtudiantCours(long idEtudiantCours, boolean absence, String motif, long coursId, long etudiantId) {
+	public EtudiantCours(long idEtudiantCours, boolean absence, String motif, Cours cours, Etudiant etudiant) {
 		this.idEtudiantCours = idEtudiantCours;
 		this.absence = absence;
 		this.motif = motif;
-		this.coursId = coursId;
-		this.etudiantId = etudiantId;
+		this.cours = cours;
+		this.etudiant = etudiant;
 	} //end ctor chargé total
 
 	//Constructeur chargé sans ID
-	public EtudiantCours(boolean absence, String motif, long coursId, long etudiantId) {
+	public EtudiantCours(boolean absence, String motif, Cours cours, Etudiant etudiant) {
 		this.absence = absence;
 		this.motif = motif;
-		this.coursId = coursId;
-		this.etudiantId = etudiantId;
+		this.cours = cours;
+		this.etudiant = etudiant;
 	} //end ctor chargé sans ID
 	
 	/* Getters & Setters */
@@ -99,29 +104,29 @@ public class EtudiantCours implements Serializable {
 	/**
 	 * @return the coursId
 	 */
-	public long getCoursId() {
-		return coursId;
+	public Cours getCoursId() {
+		return cours;
 	}
 
 	/**
 	 * @param coursId the coursId to set
 	 */
-	public void setCoursId(long coursId) {
-		this.coursId = coursId;
+	public void setCoursId(Cours cours) {
+		this.cours = cours;
 	}
 
 	/**
 	 * @return the etudiantId
 	 */
-	public long getEtudiantId() {
-		return etudiantId;
+	public Etudiant getEtudiantId() {
+		return etudiant;
 	}
 
 	/**
 	 * @param etudiantId the etudiantId to set
 	 */
-	public void setEtudiantId(long etudiantId) {
-		this.etudiantId = etudiantId;
+	public void setEtudiantId(Etudiant etudiant) {
+		this.etudiant = etudiant;
 	}
 
 	/* toString */
@@ -131,7 +136,7 @@ public class EtudiantCours implements Serializable {
 	@Override
 	public String toString() {
 		return "EtudiantCours [idEtudiantCours=" + idEtudiantCours + ", absence=" + absence + ", "
-				+ (motif != null ? "motif=" + motif + ", " : "") + "coursId=" + coursId + ", etudiantId=" + etudiantId
+				+ (motif != null ? "motif=" + motif + ", " : "") + "coursId=" + cours + ", etudiantId=" + etudiant
 				+ "]";
 	} //end toString
 

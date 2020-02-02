@@ -2,12 +2,12 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -30,6 +30,8 @@ public class Etudiant extends Personne implements Serializable {
 	/**
 	 * Ctor vide
 	 */
+	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
+	private List<Cours> listeCours;
 	public Etudiant() {
 
 	}
@@ -47,6 +49,16 @@ public class Etudiant extends Personne implements Serializable {
 		super(idPersonne, identifiant, motDePasse, nom, prenom, email, adresse);
 		this.photo = photo;
 		this.dateDeNaissance = dateDeNaissance;
+	}
+
+
+	public List<Cours> getListeCours() {
+		return listeCours;
+	}
+
+
+	public void setListeCours(List<Cours> listeCours) {
+		this.listeCours = listeCours;
 	}
 
 

@@ -6,45 +6,45 @@ import java.util.List;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 
-import com.intiformation.gestionecole.entity.Enseignant;
-import com.intiformation.gestionecole.entity.Etudiant;
+import com.intiformation.gestionecole.entity.Aide;
 
-public class EtudiantDAO implements IGestionDAO<Etudiant>{
+public class AideDAO implements IGestionDAO<Aide>{
+	
+	
 
 	@Override
-	public List<Etudiant> getAll() {
-
-		List<Etudiant> listeEtudiants = new ArrayList<>();
+	public List<Aide> getAll() {
+		
+		List<Aide> listeAides = new ArrayList<>();
 		
 		
 		try {
-			listeEtudiants=em.createQuery("SELECT a FROM Etudiant a").getResultList();
-			return listeEtudiants;
+			listeAides=em.createQuery("SELECT a FROM Aide a").getResultList();
+			return listeAides;
 			
 		} catch (PersistenceException e) {
-			System.out.println("Erreur lors de la récupération de la liste des adresses.");
+			System.out.println("Erreur lors de la récupération de la liste des aides.");
 		}
 		
 		return null;
-	
 	}
 
 	@Override
-	public Etudiant getById(long id) {
-		Etudiant etudiant;
+	public Aide getById(long id) {
+		Aide aide=null;
 		
 		try {
-			etudiant=em.find(Etudiant.class, id);
-			return etudiant;
+			aide=em.find(Aide.class, id);
+			return aide;
 		} catch (PersistenceException e) {
-			System.out.println("Erreur lors de la récupération de la etudiant");
+			System.out.println("Erreur lors de la récupération de la aide");
 			e.printStackTrace();
 		}
 		return null;
 	}
 
 	@Override
-	public boolean add(Etudiant etudiant) {
+	public boolean add(Aide aide) {
 
 		EntityTransaction tx=null;
 		
@@ -52,13 +52,40 @@ public class EtudiantDAO implements IGestionDAO<Etudiant>{
 			
 			tx=em.getTransaction();
 			tx.begin();
-			em.persist(etudiant);
+			em.persist(aide);
+			tx.commit();
+			return true;
+			
+			
+			
+		} catch (PersistenceException e) {
+			System.out.println("Erreur lors de l'ajout de la aide");
+			if (tx != null) {
+				// 6 Annulation de la transaction
+				tx.rollback();
+				e.printStackTrace();
+			}
+		}
+		
+		return false;
+	}
+
+	@Override
+	public boolean update(Aide aide) {
+
+		EntityTransaction tx=null;
+		
+		try {
+			
+			tx=em.getTransaction();
+			tx.begin();
+			em.merge(aide);
 			tx.commit();
 			return true;
 			
 			
 		} catch (PersistenceException e) {
-			System.out.println("Erreur lors de l'ajout de la etudiant");
+			System.out.println("Erreur lors de la mise a jour de la aide");
 			if (tx != null) {
 				// 6 Annulation de la transaction
 				tx.rollback();
@@ -69,9 +96,8 @@ public class EtudiantDAO implements IGestionDAO<Etudiant>{
 		
 		return false;
 	}
-
 	@Override
-	public boolean update(Etudiant etudiant) {
+	public boolean remove(Aide aide) {
 
 		EntityTransaction tx=null;
 		
@@ -79,39 +105,13 @@ public class EtudiantDAO implements IGestionDAO<Etudiant>{
 			
 			tx=em.getTransaction();
 			tx.begin();
-			em.merge(etudiant);
+			em.remove(aide);
 			tx.commit();
 			return true;
 			
 			
 		} catch (PersistenceException e) {
-			System.out.println("Erreur lors de la mise a jour de la etudiant");
-			if (tx != null) {
-				// 6 Annulation de la transaction
-				tx.rollback();
-				e.printStackTrace();
-			}
-		}
-		
-		
-		return false;
-	}
-	@Override
-	public boolean remove(Etudiant etudiant) {
-
-		EntityTransaction tx=null;
-		
-		try {
-			
-			tx=em.getTransaction();
-			tx.begin();
-			em.remove(etudiant);
-			tx.commit();
-			return true;
-			
-			
-		} catch (PersistenceException e) {
-			System.out.println("Erreur lors de la suppression de la etudiant");
+			System.out.println("Erreur lors de la suppression de la aide");
 			if (tx != null) {
 				// 6 Annulation de la transaction
 				tx.rollback();
