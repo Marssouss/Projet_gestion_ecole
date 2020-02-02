@@ -10,7 +10,6 @@ public interface IGestionDAO<T> {
 	
 	public EntityManager em = JpaUtils.getEntityManager();
 	
-	
 	public List<T> getAll();
 	
 	public T getById(long id);

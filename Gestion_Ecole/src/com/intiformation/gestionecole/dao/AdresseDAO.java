@@ -1,16 +1,29 @@
 package com.intiformation.gestionecole.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 
+import com.intiformation.gestionecole.entity.Administrateur;
 import com.intiformation.gestionecole.entity.Adresse;
 
 public class AdresseDAO implements IGestionDAO<Adresse>{
 
 	@Override
 	public List<Adresse> getAll() {
+		List<Adresse> listeAdresse = new ArrayList<>();
+		
+		
+		try {
+			listeAdresse=em.createQuery("SELECT a FROM Adresse a").getResultList();
+			return listeAdresse;
+			
+		} catch (PersistenceException e) {
+			System.out.println("Erreur lors de la récupération de la liste des adresses.");
+		}
+		
 		return null;
 	}
 

@@ -3,6 +3,7 @@ package com.intiformation.gestionecole.test;
 import java.util.List;
 
 import com.intiformation.gestionecole.entity.Administrateur;
+import com.intiformation.gestionecole.entity.Adresse;
 import com.intiformation.gestionecole.service.AdministrateurService;
 
 public class AppTest {
@@ -11,7 +12,8 @@ public class AppTest {
 
 		//TEST ADMINISTRATEUR 
 	AdministrateurService administrateurService = new AdministrateurService();
-	Administrateur administrateur = new Administrateur("Identifiant Admin", "Mdp Admin", "Nom Admin", "Prenom Admin", "MailAdmin");
+	Adresse adresse = new Adresse("29 rue test", "33000", "Bordeaux");
+	Administrateur administrateur = new Administrateur("Identifiant", "Mdp", "nom", "prenom", "Mail", adresse);
 	
 	//Ajout 
 	
@@ -20,6 +22,7 @@ public class AppTest {
 	}
 	
 	//Modif
+	
 	administrateur.setNom("Nom Admin modifier");
 	if(administrateurService.modifier(administrateur)) {
 		System.out.println("L amodification du client à été réalisée avec succés");
@@ -38,9 +41,9 @@ public class AppTest {
 	}
 	
 	//Supprimer
-	if(administrateurService.supprimer(administrateurChercher)) {
-		System.out.println("La suppression de l'admin a corectement réussie.");
-	}
+//	if(administrateurService.supprimer(administrateurChercher)) {
+//		System.out.println("La suppression de l'admin a corectement réussie.");
+//	}
 	
 	
 		

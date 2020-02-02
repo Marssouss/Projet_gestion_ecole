@@ -2,16 +2,27 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+/**
+ * @author IN-BR-015
+ *
+ */
 @Entity
-@Table(name="personnes")
-public class Personne implements Serializable {
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+public abstract class Personne implements Serializable {
+
+
 	/* Propriétés */
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -32,38 +43,63 @@ public class Personne implements Serializable {
 	
 	@Column(name="email")
 	protected String email;
+	
+	@OneToOne(cascade=CascadeType.ALL)//Ajout en cascade, suppr en cascade....
+	@JoinColumn(name="adresse_id",referencedColumnName="id_adresse")//Gestion de la FK
+//	@Column(name="adresse")
+	protected Adresse adresse;
 
-	/* Constructeurs */
-	//Constructeur vide
+	/**
+	 * Ctor vide
+	 */
 	public Personne() {
-		
-	} //End ctor vide
 
-	//Constructeur avec tous les champs
-	public Personne(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email) {
+	}
+	
+	/**
+	 * Ctor sans id
+	 * @param identifiant
+	 * @param motDePasse
+	 * @param nom
+	 * @param prenom
+	 * @param email
+	 * @param adresse
+	 */
+	public Personne(String identifiant, String motDePasse, String nom, String prenom, String email, Adresse adresse) {
+		this.identifiant = identifiant;
+		this.motDePasse = motDePasse;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.adresse = adresse;
+	}
+
+	/**
+	 * Ctor avec id
+	 * @param idPersonne
+	 * @param identifiant
+	 * @param motDePasse
+	 * @param nom
+	 * @param prenom
+	 * @param email
+	 * @param adresse
+	 */
+	public Personne(long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
+			Adresse adresse) {
 		this.idPersonne = idPersonne;
 		this.identifiant = identifiant;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
-	} //end ctor total
+		this.adresse = adresse;
+	}
 
-	//Constructeur sans ID
-	public Personne(String identifiant, String motDePasse, String nom, String prenom, String email) {
-		this.identifiant = identifiant;
-		this.motDePasse = motDePasse;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.email = email;
-	} //end ctor sans ID
-
-	/* Getters & Setters */
-	public Long getIdPersonne() {
+	public long getIdPersonne() {
 		return idPersonne;
 	}
 
-	public void setIdPersonne(Long idPersonne) {
+	public void setIdPersonne(long idPersonne) {
 		this.idPersonne = idPersonne;
 	}
 
@@ -107,11 +143,22 @@ public class Personne implements Serializable {
 		this.email = email;
 	}
 
-	/* toString */
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
 	@Override
 	public String toString() {
 		return "Personne [idPersonne=" + idPersonne + ", identifiant=" + identifiant + ", motDePasse=" + motDePasse
-				+ ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + "]";
-	} //end toString
-
+				+ ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse + "]";
+	}
+	
+	
+	
+	
+	
 } //end class

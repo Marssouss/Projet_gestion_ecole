@@ -1,17 +1,33 @@
 package com.intiformation.gestionecole.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 
+import com.intiformation.gestionecole.entity.Personne;
 import com.intiformation.gestionecole.entity.Promotion;
 
 public class PromotionDAO implements IGestionDAO<Promotion>{
 
 	@Override
 	public List<Promotion> getAll() {
+
+
+		List<Promotion> listePromotion = new ArrayList<>();
+		
+		
+		try {
+			listePromotion=em.createQuery("SELECT a FROM Promotions a").getResultList();
+			return listePromotion;
+			
+		} catch (PersistenceException e) {
+			System.out.println("Erreur lors de la récupération de la liste des adresses.");
+		}
+		
 		return null;
+	
 	}
 
 	@Override

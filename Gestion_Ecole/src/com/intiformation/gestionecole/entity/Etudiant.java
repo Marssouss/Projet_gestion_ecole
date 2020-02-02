@@ -9,57 +9,79 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="etudiants")
 public class Etudiant extends Personne implements Serializable {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id_etudiant")
-	private long idEtudiant;
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Column(name="id_etudiant")
+//	private long idEtudiant;
 	
 	@Column(name="photo")
 	private String photo;
 	
 	@Column(name="date_de_naissance")
+	@Temporal(TemporalType.DATE)
 	private Date dateDeNaissance;
 
-	/* Constructeurs */
-	//Constructeur vide
-	public Etudiant(String identifiant, String motDePasse, String nom, String prenom, String email) {
-		super(identifiant, motDePasse, nom, prenom, email);
-	} //end ctor vide
+	/**
+	 * Ctor vide
+	 */
+	public Etudiant() {
 
-	//Constructeur chargé total
-	public Etudiant(long idEtudiant, String photo, Date dateDeNaissance) {
-		this.idEtudiant = idEtudiant;
+	}
+
+
+	public Etudiant(String identifiant, String motDePasse, String nom, String prenom, String email, Adresse adresse,
+			String photo, Date dateDeNaissance) {
+		super(identifiant, motDePasse, nom, prenom, email, adresse);
 		this.photo = photo;
 		this.dateDeNaissance = dateDeNaissance;
-	} //End ctor chargé total
-
-	//Constructeur chargé sans ID
-	public Etudiant(String photo, Date dateDeNaissance) {
-		this.photo = photo;
-		this.dateDeNaissance = dateDeNaissance;
-	} //End ctor chargé sans ID
-
-
-	public Etudiant(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
-			long idEtudiant, String photo, Date dateDeNaissance) {
-		super(idPersonne, identifiant, motDePasse, nom, prenom, email);
-		this.idEtudiant = idEtudiant;
+	}
+	
+	public Etudiant(long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
+			Adresse adresse, String photo, Date dateDeNaissance) {
+		super(idPersonne, identifiant, motDePasse, nom, prenom, email, adresse);
 		this.photo = photo;
 		this.dateDeNaissance = dateDeNaissance;
 	}
 
-	/* toString */
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+
+	public String getPhoto() {
+		return photo;
+	}
+
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
+
+	public Date getDateDeNaissance() {
+		return dateDeNaissance;
+	}
+
+
+	public void setDateDeNaissance(Date dateDeNaissance) {
+		this.dateDeNaissance = dateDeNaissance;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Etudiant [idEtudiant=" + idEtudiant + ", " + (photo != null ? "photo=" + photo + ", " : "")
-				+ (dateDeNaissance != null ? "dateDeNaissance=" + dateDeNaissance : "") + "]";
+		return "Etudiant [photo=" + photo + ", dateDeNaissance=" + dateDeNaissance + ", idPersonne=" + idPersonne
+				+ ", identifiant=" + identifiant + ", motDePasse=" + motDePasse + ", nom=" + nom + ", prenom=" + prenom
+				+ ", email=" + email + ", adresse=" + adresse + "]";
 	}
+
+	
+	
+	
+
+	
+	
 		
 } //end class

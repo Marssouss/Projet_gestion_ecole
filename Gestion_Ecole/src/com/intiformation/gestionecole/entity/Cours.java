@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="cours")
@@ -23,9 +25,11 @@ public class Cours implements Serializable {
 	private String libelle;
 	
 	@Column(name="date")
+	@Temporal(TemporalType.DATE)
 	private Date date;
 	
 	@Column(name="duree")
+	@Temporal(TemporalType.TIME)
 	private Date duree;
 	
 	@Column(name="description")

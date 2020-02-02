@@ -11,45 +11,33 @@ import javax.persistence.Table;
 @Entity
 @Table(name="enseignants")
 public class Enseignant extends Personne implements Serializable {
-	/* Propriétés */
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long idEnseignant;
 
 	public Enseignant() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	/* Constructeurs */
-	//Constructeur vide
-	public Enseignant(String identifiant, String motDePasse, String nom, String prenom, String email) {
-		super(identifiant, motDePasse, nom, prenom, email);
-
-	} //end ctor vide
-
-	//Constructeur chargé
-
-	public Enseignant(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
-			long idEnseignant) {
-		super(idPersonne, identifiant, motDePasse, nom, prenom, email);
-		this.idEnseignant = idEnseignant;
-	}//end ctor chargé
-
-	/* Getters & Setters */
-	public long getIdEnseignant() {
-		return idEnseignant;
+	public Enseignant(long idPersonne, String identifiant, String motDePasse, String nom, String prenom, String email,
+			Adresse adresse) {
+		super(idPersonne, identifiant, motDePasse, nom, prenom, email, adresse);
+		// TODO Auto-generated constructor stub
 	}
 
-
-	public void setIdEnseignant(long idEnseignant) {
-		this.idEnseignant = idEnseignant;
+	public Enseignant(String identifiant, String motDePasse, String nom, String prenom, String email, Adresse adresse) {
+		super(identifiant, motDePasse, nom, prenom, email, adresse);
+		// TODO Auto-generated constructor stub
 	}
 
-	/* toString */
 	@Override
 	public String toString() {
-		return "Enseignant [idEnseignant=" + idEnseignant + "]";
-	} //end toString
+		return "Enseignant [idPersonne=" + idPersonne + ", identifiant=" + identifiant + ", motDePasse=" + motDePasse
+				+ ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse + "]";
+	}
+
+	
+	
+	
+	
+	
 
 }

@@ -12,30 +12,31 @@ import javax.persistence.Table;
 @Entity
 @Table(name="administrateurs")
 public class Administrateur extends Personne implements Serializable {
-	/* Propriétés */
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id_administrateur")
-	private long idAdministrateur;
-	
-	/* Constructeurs */
-	// Constructeur vide
-	public Administrateur(String identifiant, String motDePasse, String nom, String prenom, String email) {
-		super(identifiant, motDePasse, nom, prenom, email);
-		// TODO Auto-generated constructor stub
-	} //end ctor vide
 
-	//Constructeur chargé
-	public Administrateur(Long idPersonne, String identifiant, String motDePasse, String nom, String prenom,
-			String email, long idAdministrateur) {
-		super(idPersonne, identifiant, motDePasse, nom, prenom, email);
-		this.idAdministrateur = idAdministrateur;
+	public Administrateur() {
+		super();
 	}
 
-	/* toString */
+	public Administrateur(long idPersonne, String identifiant, String motDePasse, String nom, String prenom,
+			String email, Adresse adresse) {
+		super(idPersonne, identifiant, motDePasse, nom, prenom, email, adresse);
+	}
+
+	public Administrateur(String identifiant, String motDePasse, String nom, String prenom, String email,
+			Adresse adresse) {
+		super(identifiant, motDePasse, nom, prenom, email, adresse);
+	}
+
 	@Override
 	public String toString() {
-		return "Administrateur [idAdministrateur=" + idAdministrateur + "]";
-	}	
+		return "Administrateur [idPersonne=" + idPersonne + ", identifiant=" + identifiant + ", motDePasse="
+				+ motDePasse + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse
+				+ "]";
+	}
+
+	
+	
+	
+	
 
 } //end class

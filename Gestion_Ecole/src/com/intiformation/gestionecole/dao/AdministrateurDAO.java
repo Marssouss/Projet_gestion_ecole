@@ -1,5 +1,6 @@
 package com.intiformation.gestionecole.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityTransaction;
@@ -8,15 +9,29 @@ import javax.persistence.PersistenceException;
 import com.intiformation.gestionecole.entity.Administrateur;
 
 public class AdministrateurDAO implements IGestionDAO<Administrateur>{
+	
+	
 
 	@Override
 	public List<Administrateur> getAll() {
+		
+		List<Administrateur> listeAdministrateurs = new ArrayList<>();
+		
+		
+		try {
+			listeAdministrateurs=em.createQuery("SELECT a FROM Administrateur a").getResultList();
+			return listeAdministrateurs;
+			
+		} catch (PersistenceException e) {
+			System.out.println("Erreur lors de la récupération de la liste des administrateurs.");
+		}
+		
 		return null;
 	}
 
 	@Override
 	public Administrateur getById(long id) {
-		Administrateur administrateur;
+		Administrateur administrateur=null;
 		
 		try {
 			administrateur=em.find(Administrateur.class, id);
@@ -42,6 +57,7 @@ public class AdministrateurDAO implements IGestionDAO<Administrateur>{
 			return true;
 			
 			
+			
 		} catch (PersistenceException e) {
 			System.out.println("Erreur lors de l'ajout de la administrateur");
 			if (tx != null) {
@@ -50,7 +66,6 @@ public class AdministrateurDAO implements IGestionDAO<Administrateur>{
 				e.printStackTrace();
 			}
 		}
-		
 		
 		return false;
 	}

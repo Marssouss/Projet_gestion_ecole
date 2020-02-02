@@ -34,6 +34,6 @@
 			<!-- Propriété de eclipselink pour l'affichage des requêtes SQL dans la console -->
 			<!-- Valeurs: FINE // OFF // CONFIG // WARN // INFO  -->
 			<property name="eclipselink.logging.level" value="FINE"/>
-	
+	</properties>
 	</persistence-unit>
 </persistence>

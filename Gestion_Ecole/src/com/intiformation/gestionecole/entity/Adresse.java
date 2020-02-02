@@ -20,10 +20,13 @@ public class Adresse {
 	private String rue;
 	
 	@Column(name="code_postal")
-	private int codePostal;
+	private String codePostal;
 	
 	@Column(name="ville")
 	private String ville;
+	
+//	@OneToOne(mappedBy="adresse",cascade=CascadeType.ALL)
+//	private Personne personne;
 
 	/* Constructeurs */
 	//Constructeur vide
@@ -32,7 +35,7 @@ public class Adresse {
 	} //end ctor vide
 
 	//Constructeur chargé toutes infos
-	public Adresse(long idAdresse, String rue, int codePostal, String ville) {
+	public Adresse(long idAdresse, String rue, String codePostal, String ville) {
 		this.idAdresse = idAdresse;
 		this.rue = rue;
 		this.codePostal = codePostal;
@@ -40,7 +43,7 @@ public class Adresse {
 	} //end ctor chargé toutes infos
 
 	//Constructeur chargé sans ID
-	public Adresse(String rue, int codePostal, String ville) {
+	public Adresse(String rue, String codePostal, String ville) {
 		this.rue = rue;
 		this.codePostal = codePostal;
 		this.ville = ville;
