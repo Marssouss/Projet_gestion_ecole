@@ -19,7 +19,7 @@ public class PromotionDAO implements IGestionDAO<Promotion>{
 		
 		
 		try {
-			listePromotion=em.createQuery("SELECT a FROM Promotions a").getResultList();
+			listePromotion=em.createQuery("SELECT a FROM Promotion a").getResultList();
 			return listePromotion;
 			
 		} catch (PersistenceException e) {

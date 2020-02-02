@@ -8,7 +8,9 @@ import java.util.List;
 import com.intiformation.gestionecole.entity.Adresse;
 import com.intiformation.gestionecole.entity.Cours;
 import com.intiformation.gestionecole.entity.Etudiant;
+import com.intiformation.gestionecole.entity.Promotion;
 import com.intiformation.gestionecole.service.EtudiantService;
+import com.intiformation.gestionecole.service.PromotionService;
 
 public class AppTest {
 	
@@ -89,9 +91,13 @@ public class AppTest {
 		Date dateDeNaissance =new Date(1995, 12, 10);
 		EtudiantService etudiantService = new EtudiantService();
 		Etudiant etudiant = new Etudiant("identifiant", "mdp", "nom", "prenom", "mail", adresse, "photo", dateDeNaissance);
+		
+		
+		
 		List<Cours> listeCours= new ArrayList<Cours>();
 		listeCours.add(cours);
-		etudiant.setListeCours(listeCours);
+//		etudiant.setListeCours(listeCours);
+		
 		
 		
 		
@@ -117,6 +123,35 @@ public class AppTest {
 //			System.out.println("Suppression OK");
 //		}
 //		
+		
+		PromotionService promotionService=new PromotionService();
+		Promotion promotion = new Promotion("Promotion 1 ");
+		List<Etudiant> listeEtudiant = new ArrayList<>();
+		listeEtudiant.add(etudiant);
+		promotion.setListeEtudiants(listeEtudiants);
+		
+		
+		if(promotionService.ajouter(promotion)) {
+			System.out.println("Ajout de laide OK");
+		}
+		
+		promotion.setLibelle("Promo 1 modif");
+		if(promotionService.modifier(promotion)) {
+			System.out.println("Modif de AIDE OK");
+		}
+		
+		Promotion promotionSearched = promotionService.recupererParId(1);
+		
+		System.out.println(etudiant);
+		
+		List<Promotion> listePromo = promotionService.recupererTous();
+		for(Promotion promo : listePromo) {
+			System.out.println(promo);
+		}
+		
+//		if(promotionService.supprimer(etudiantSearched)) {
+//			System.out.println("Suppression OK");
+//		}
 		
 		
 		

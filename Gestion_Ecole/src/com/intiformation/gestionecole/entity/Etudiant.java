@@ -26,12 +26,16 @@ public class Etudiant extends Personne implements Serializable {
 	@Column(name="date_de_naissance")
 	@Temporal(TemporalType.DATE)
 	private Date dateDeNaissance;
+	
 
+	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
+	private List<Cours> listeCours;
+	
+	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
+	private List<Promotion> listePromotions;
 	/**
 	 * Ctor vide
 	 */
-	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
-	private List<Cours> listeCours;
 	public Etudiant() {
 
 	}

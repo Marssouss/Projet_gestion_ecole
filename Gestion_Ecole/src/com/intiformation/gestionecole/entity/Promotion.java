@@ -1,12 +1,17 @@
 package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,6 +25,14 @@ public class Promotion implements Serializable {
 	
 	@Column(name="libelle")
 	public String libelle;
+	
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="Promotion_Assos_Etudiants",
+			   joinColumns=@JoinColumn(name="Promotion_ID"),
+			   inverseJoinColumns=@JoinColumn(name="Etudiant_ID")
+			  )
+	List<Etudiant> listeEtudiants;
+	
 
 	/* Constructeurs */
 	//Constructeur vide
@@ -47,4 +60,30 @@ public class Promotion implements Serializable {
 		return "Promotion [idPromotion=" + idPromotion + ", " + (libelle != null ? "libelle=" + libelle : "") + "]";
 	} //end toString
 
+	public long getIdPromotion() {
+		return idPromotion;
+	}
+
+	public void setIdPromotion(long idPromotion) {
+		this.idPromotion = idPromotion;
+	}
+
+	public String getLibelle() {
+		return libelle;
+	}
+
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
+
+	public List<Etudiant> getListeEtudiants() {
+		return listeEtudiants;
+	}
+
+	public void setListeEtudiants(List<Etudiant> listeEtudiants) {
+		this.listeEtudiants = listeEtudiants;
+	}
+
+	
+	
 } //end class

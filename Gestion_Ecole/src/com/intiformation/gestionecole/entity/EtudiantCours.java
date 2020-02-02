@@ -42,6 +42,7 @@ public class EtudiantCours implements Serializable {
 	} //end ctor vide
 
 	//Constructeur chargé total
+	
 	public EtudiantCours(long idEtudiantCours, boolean absence, String motif, Cours cours, Etudiant etudiant) {
 		this.idEtudiantCours = idEtudiantCours;
 		this.absence = absence;
