@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -47,7 +48,27 @@ public class Cours implements Serializable {
 			   joinColumns=@JoinColumn(name="cours_id"),
 			   inverseJoinColumns=@JoinColumn(name="etudiant_id")
 			  )
-	List<Etudiant> listeEtudiants;
+	private List<Etudiant> listeEtudiants;
+	
+//	@ManyToOne(cascade=CascadeType.ALL)
+//	@JoinColumn(name="Matiere_ID",referencedColumnName="id_matiere")
+	
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="etudiants_cours",
+			   joinColumns=@JoinColumn(name="cours_id"),
+			   inverseJoinColumns=@JoinColumn(name="etudiant_id")
+			  )
+	private List<Matiere> matiere;
+	
+//	@ManyToOne(cascade=CascadeType.ALL)
+//	@JoinColumn(name="Promotion_ID",referencedColumnName="id_promotion")
+	
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="etudiants_cours",
+			   joinColumns=@JoinColumn(name="cours_id"),
+			   inverseJoinColumns=@JoinColumn(name="etudiant_id")
+			  )
+	private List<Promotion> promotion;
 
 	/* Constructeurs */
 	//Constructeur vide

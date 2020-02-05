@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<h:outputStylesheet library="css" name="jquery-ui.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+
+	<h:outputScript library="js" name="bootstrap.js" />
+	<h:outputScript library="js" name="jquery-3.4.1.js" />
+	<h:outputScript library="js" name="jquery-ui.js" />
+	<h:outputScript library="js" name="script.js" />
+</h:head>
+<h:body>
+
+	<ui:composition>
+		<h:form id="form">
+
+
+			<p:dataTable value="#{gestionAdminBean.adminAfficherTous()}"
+				var="curentAdmin" border="1" width="60%">
+
+
+				<!-- COl idLivre + donnée -->
+				<p:column>
+
+					<!-- En tête -->
+					<f:facet name="header">
+						<h:outputText value="Id" />
+					</f:facet>
+					<!-- Données -->
+					<h:outputText value="#{curentAdmin.idPersonne}" />
+				</p:column>
+
+
+				<!-- COl idLivre + donnée -->
+				<p:column>
+
+					<!-- En tête -->
+					<f:facet name="header">
+						<h:outputText value="Nom" />
+					</f:facet>
+					<!-- Données -->
+					<h:outputText value="#{curentAdmin.nom}" />
+				</p:column>
+
+				<!-- COl titre + donnée -->
+				<p:column>
+
+					<!-- En tête -->
+					<f:facet name="header">
+						<h:outputText value="Prenom" />
+					</f:facet>
+					<!-- Données -->
+					<h:outputText value="#{curentAdmin.prenom}" />
+				</p:column>
+
+
+
+				<!-- COl auteur + donnée -->
+				<p:column>
+
+					<!-- En tête -->
+					<f:facet name="header">
+						<h:outputText value="Identifiant" />
+					</f:facet>
+					<!-- Données -->
+					<h:outputText value="#{curentAdmin.identifiant}" />
+				</p:column>
+
+				<!-- COl disponibilité + donnée -->
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Mot de passe" />
+					</f:facet>
+					<!-- Données -->
+					<h:outputText value="#{curentAdmin.motDePasse}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="adresse" />
+					</f:facet>
+					<!-- Données -->
+					<h:outputText value="#{curentAdmin.adresse}" />
+				</p:column>
+
+
+				<p:column>
+
+					<!-- En tête -->
+					<f:facet name="header">
+						<h:outputText value="Supprimer" />
+					</f:facet>
+					<!-- Liens hypertexte  -->
+					<!-- Action va nous servir de clef d'outcom pour la navigation. 
+				ActionListener = méthode à invoquer dans ke managedBean pour passer le parametre.
+			-->
+					<h:commandLink id="deleteAdmin" action="listAdmin"
+						actionListener="#{gestionAdminBean.supprimerAdministrateur}">
+						<!-- Passage d'un param idLivre au composant -->
+						<f:param id="deleteID" name="id" value="#{curentAdmin.idPersonne}" />
+
+						<!-- Label du lien  -->
+						<h:outputText value="supprimer" />
+					</h:commandLink>
+				</p:column>
+
+
+				<p:column>
+
+					<!-- En tête -->
+					<f:facet name="header">
+						<h:outputText value="Modifier" />
+					</f:facet>
+					<!-- Lien hypertexte -->
+					<h:commandLink id="update" action="editBook"
+						actionListener="#{gestionAdminBean.supprimerAdministrateur()}">
+
+						<f:param id="editID" name="id" value="#{book.idLivre}" />
+
+						<h:outputText value="modifier" />
+
+					</h:commandLink>
+				</p:column>
+
+
+			</p:dataTable>
+
+
+		</h:form>
+	</ui:composition>
+
+</h:body>
+</html>

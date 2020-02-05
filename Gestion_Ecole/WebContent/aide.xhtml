@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+
+
+	<h:form>
+
+		<span class="ui-float-label"> <p:inputText id="float-input"
+				value="#{aideBean.page}" /> <p:outputLabel for="@previous"
+				value="Page d'aide" />
+		</span>
+
+
+
+		<h3 style="margin-top: 0">Aide</h3>
+		<p:textEditor widgetVar="editor1" value="#{aideBean.contenu}"
+			height="300" style="margin-bottom:10px" />
+
+		<p:commandButton value="Envoyer" update="display" icon="pi pi-save"
+			action="#{aideBean.ajouterAide()}" />
+		<p:commandButton value="Effacer" type="button"
+			onclick="PF('editor1').clear();" icon="pi pi-times" />
+
+		<p:commandButton value="Retour" type="button" outcome="navIndex"/>
+
+
+		<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
+			hideEffect="fade">
+			<p:outputPanel id="display">
+				<h:outputText value="#{aideBean.contenu}" escape="false" />
+			</p:outputPanel>
+		</p:dialog>
+	</h:form>
+
+
+
+
+
+
+</h:body>
+</html>

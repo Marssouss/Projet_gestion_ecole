@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,12 +28,15 @@ public class EtudiantCours implements Serializable {
 	@Column(name="motif")
 	private String motif;
 	
-	@OneToOne(cascade=CascadeType.PERSIST)//Ajout en cascade, suppr en cascade....
-	@JoinColumn(name="cours_id",referencedColumnName="idCours")//Gestion de la FK	
+	@OneToOne(cascade=CascadeType.ALL)//Ajout en cascade, suppr en cascade....
+	@JoinColumn(name="cours_id",referencedColumnName="id_cours")//Gestion de la FK	
 	private Cours cours;
-	
-	@OneToOne(cascade=CascadeType.PERSIST)//Ajout en cascade, suppr en cascade....
-	@JoinColumn(name="etudiant_id",referencedColumnName="idEtudiant")//Gestion de la FK	
+
+//	@OneToMany(mappedBy="etudiantsCours",
+//			   targetEntity=Etudiant.class,
+//			   cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="Etudiant_ID",referencedColumnName="id_personne")
 	private Etudiant etudiant;
 
 	/* Constructeurs */

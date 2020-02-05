@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<h:outputStylesheet library="css" name="jquery-ui.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+
+	<h:outputScript library="js" name="bootstrap.js" />
+	<h:outputScript library="js" name="jquery-3.4.1.js" />
+	<h:outputScript library="js" name="jquery-ui.js" />
+	<h:outputScript library="js" name="script.js" />
+</h:head>
+<h:body>
+
+
+	<h:form id="form">
+
+		<p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+
+		<p:tabView>
+			<p:tab title="Administrateur">
+				<h:form>
+
+					<h3>Nom</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.nom}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Prenom</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.prenom}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<h3>Identifiant</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.mail}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Mot de passe</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.mdp}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Rue</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.rue}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Ville</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.ville}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Code Postal</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.codePostal}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<p:commandButton value="Submit" icon="pi pi-check"
+						action="#{ajoutPersonne.ajouterPersonne()}">
+						<f:param name="type" value="Administrateur"></f:param>
+					</p:commandButton>
+				</h:form>
+			</p:tab>
+			<p:tab title="Enseignant">
+				<h:form>
+					<h3>Nom</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.nom}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Prenom</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.prenom}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<h3>Identifiant</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.mail}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Mot de passe</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.mdp}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Rue</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.rue}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Ville</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.ville}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Code Postal</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.codePostal}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<p:commandButton value="Submit" icon="pi pi-check"
+						action="#{ajoutPersonne.ajouterPersonne()}">
+						<f:param name="type" value="Administrateur"></f:param>
+					</p:commandButton>
+				</h:form>
+			</p:tab>
+			<p:tab title="Etudiant">
+				<h:form>
+					<h3>Nom</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.nom}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Prenom</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.prenom}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<h3>Identifiant</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.mail}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Mot de passe</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.mdp}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Rue</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.rue}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Ville</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.ville}" /> <p:outputLabel for="@previous"
+							value="Username" />
+					</span>
+
+					<h3>Adresse : Code Postal</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.codePostal}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<h3>Photo</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.codePostal}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+					<h3>Date naisse</h3>
+					<span class="ui-float-label"> <p:inputText
+							value="#{ajoutPersonne.codePostal}" /> <p:outputLabel
+							for="@previous" value="Username" />
+					</span>
+
+
+
+					<p:commandButton value="Submit" icon="pi pi-check"
+						action="#{ajoutPersonne.ajouterPersonne()}">
+						<f:param name="type" value="Administrateur"></f:param>
+					</p:commandButton>
+				</h:form>
+			</p:tab>
+		</p:tabView>
+
+	</h:form>
+
+
+</h:body>
+</html>

@@ -8,7 +8,10 @@ import java.util.List;
 import com.intiformation.gestionecole.entity.Adresse;
 import com.intiformation.gestionecole.entity.Cours;
 import com.intiformation.gestionecole.entity.Etudiant;
+import com.intiformation.gestionecole.entity.EtudiantCours;
 import com.intiformation.gestionecole.entity.Promotion;
+import com.intiformation.gestionecole.service.CoursService;
+import com.intiformation.gestionecole.service.EtudiantCoursService;
 import com.intiformation.gestionecole.service.EtudiantService;
 import com.intiformation.gestionecole.service.PromotionService;
 
@@ -92,13 +95,9 @@ public class AppTest {
 		EtudiantService etudiantService = new EtudiantService();
 		Etudiant etudiant = new Etudiant("identifiant", "mdp", "nom", "prenom", "mail", adresse, "photo", dateDeNaissance);
 		
-		
-		
-		List<Cours> listeCours= new ArrayList<Cours>();
-		listeCours.add(cours);
-//		etudiant.setListeCours(listeCours);
-		
-		
+		EtudiantCours etudiantCours = new EtudiantCours(false, "", cours, etudiant);
+		EtudiantCoursService etuCService = new EtudiantCoursService();
+		etuCService.ajouter(etudiantCours);
 		
 		
 		if(etudiantService.ajouter(etudiant)) {
@@ -149,10 +148,10 @@ public class AppTest {
 			System.out.println(promo);
 		}
 		
-//		if(promotionService.supprimer(etudiantSearched)) {
+//		if(promotionService.supprimer(promotionSearched)) {
 //			System.out.println("Suppression OK");
 //		}
-		
+//		
 		
 		
 		

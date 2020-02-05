@@ -21,6 +21,9 @@ public class Matiere implements Serializable{
 	@Column(name="libelle")
 	private String libelle;
 
+	
+	
+	
 	/* Constructeurs */
 	//Constructeur vide 
 	public Matiere() {

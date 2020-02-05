@@ -7,7 +7,10 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -28,11 +31,19 @@ public class Etudiant extends Personne implements Serializable {
 	private Date dateDeNaissance;
 	
 
-	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
-	private List<Cours> listeCours;
+//	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
+//	private List<Cours> listeCours;
 	
 	@ManyToMany(mappedBy="listeEtudiants",cascade=CascadeType.ALL)
 	private List<Promotion> listePromotions;
+	
+//	@ManyToOne
+//	@JoinColumn(name="SESSION_ID",referencedColumnName="idEtudiantCours")
+
+//	@ManyToOne
+//	@JoinColumn(name="etudiant_cours_id",referencedColumnName="id_etudiant_cours")
+	@OneToMany(mappedBy="etudiant",targetEntity=EtudiantCours.class,cascade=CascadeType.ALL)
+	private List<EtudiantCours> etudiantsCours;
 	/**
 	 * Ctor vide
 	 */
@@ -55,15 +66,15 @@ public class Etudiant extends Personne implements Serializable {
 		this.dateDeNaissance = dateDeNaissance;
 	}
 
-
-	public List<Cours> getListeCours() {
-		return listeCours;
-	}
-
-
-	public void setListeCours(List<Cours> listeCours) {
-		this.listeCours = listeCours;
-	}
+//
+//	public List<Cours> getListeCours() {
+//		return listeCours;
+//	}
+//
+//
+//	public void setListeCours(List<Cours> listeCours) {
+//		this.listeCours = listeCours;
+//	}
 
 
 	public String getPhoto() {

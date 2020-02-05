@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="navAide::#aide.xhtml" NAME="output"
+    PATH="/aide.xhtml" TARGET="rules:#aide.xhtml" TITLE="navAide" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#aide.xhtml" PATH="/aide.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#aide.xhtml:0" NAME="item" PATH="/aide.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="navIndex::#index.xhtml" NAME="output"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml" TITLE="navIndex" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#gestion.xhtml" PATH="/gestion.xhtml"
+  SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#gestion.xhtml:0" NAME="item"
+   PATH="/gestion.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listAdmin::#gestion.xhtml" NAME="output"
+    PATH="/gestion.xhtml" TARGET="rules:#gestion.xhtml"
+    TITLE="listAdmin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>
