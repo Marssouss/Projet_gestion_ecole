@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import javax.faces.bean.SessionScoped;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,6 +23,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="cours")
+@SessionScoped
 public class Cours implements Serializable {
 	/* Propriétés */
 	@Id

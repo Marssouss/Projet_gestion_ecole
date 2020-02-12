@@ -23,6 +23,10 @@ public class EtudiantCoursService implements IGestionService<EtudiantCours>{
 	public EtudiantCours recupererParId(long id) {
 		return etudiantCoursDAO.getById(id);
 	}
+	
+	public EtudiantCours recupererParIdEtudiant(long id) {
+		return etudiantCoursDAO.getByIdEtudiant(id);
+	}
 
 	@Override
 	public boolean ajouter(EtudiantCours etudiantCours) {

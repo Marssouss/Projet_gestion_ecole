@@ -18,7 +18,7 @@ public class MatiereDAO implements IGestionDAO<Matiere>{
 		
 		
 		try {
-			listeMatieres=em.createQuery("SELECT a FROM Matieres a").getResultList();
+			listeMatieres=em.createQuery("SELECT a FROM Matiere a").getResultList();
 			return listeMatieres;
 			
 		} catch (PersistenceException e) {

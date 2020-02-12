@@ -1,5 +1,6 @@
 package com.intiformation.gestionecole.entity;
 
+import javax.faces.bean.SessionScoped;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="adresses")
+@SessionScoped
 public class Adresse {
 	/* Propriétés */
 	@Id
@@ -48,6 +50,40 @@ public class Adresse {
 		this.codePostal = codePostal;
 		this.ville = ville;
 	} //end ctor chargé sans ID
+	
+	
+
+	public long getIdAdresse() {
+		return idAdresse;
+	}
+
+	public void setIdAdresse(long idAdresse) {
+		this.idAdresse = idAdresse;
+	}
+
+	public String getRue() {
+		return rue;
+	}
+
+	public void setRue(String rue) {
+		this.rue = rue;
+	}
+
+	public String getCodePostal() {
+		return codePostal;
+	}
+
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
 
 	/* toString */
 	@Override

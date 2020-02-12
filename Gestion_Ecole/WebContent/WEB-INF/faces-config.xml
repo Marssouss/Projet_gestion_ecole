@@ -29,10 +29,606 @@
 	<navigation-rule>
 		<from-view-id>/gestion.xhtml</from-view-id>
 		<navigation-case>
-			<from-outcome>listAdmin</from-outcome>
-			<to-view-id>/gestion.xhtml</to-view-id>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
 		</navigation-case>
 
 	</navigation-rule>
 
+
+	<navigation-rule>
+		<from-view-id>/administrateurs.xhtml</from-view-id>
+
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>addAdministrateur</from-outcome>
+			<to-view-id>/ajouteradministrateur.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>chercherAdmin</from-outcome>
+			<to-view-id>/modifieradministrateur.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>editAdmin</from-outcome>
+			<to-view-id>/modifieradministrateur.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/ajouteradministrateur.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listAdmin</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifieradministrateur.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listAdmin</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+	<!-- ENSEIGNANT -->
+
+	<navigation-rule>
+		<from-view-id>/enseignants.xhtml</from-view-id>
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>addEnseignant</from-outcome>
+			<to-view-id>/ajouterenseignant.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>editEnseignant</from-outcome>
+			<to-view-id>/modifierenseignant.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/ajouterenseignant.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/ajouterenseignant.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifierenseignant.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+
+	<!-- ETUDIANT -->
+
+	<navigation-rule>
+		<from-view-id>/etudiants.xhtml</from-view-id>
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>addEtudiant</from-outcome>
+			<to-view-id>/ajouteretudiant.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>editEtudiant</from-outcome>
+			<to-view-id>/modifieretudiant.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>infoEtudiant</from-outcome>
+			<to-view-id>/infoetudiant.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/ajouteretudiant.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifieretudiant.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<!-- MATIERES -->
+
+	<navigation-rule>
+		<from-view-id>/matieres.xhtml</from-view-id>
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>addMatiere</from-outcome>
+			<to-view-id>/ajoutermatiere.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>editMatiere</from-outcome>
+			<to-view-id>/modifiermatiere.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/ajoutermatiere.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifiermatiere.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+
+	<!-- PROMOTIONS -->
+
+	<navigation-rule>
+		<from-view-id>/promotions.xhtml</from-view-id>
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>addPromotion</from-outcome>
+			<to-view-id>/ajouterpromotion.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>editPromotion</from-outcome>
+			<to-view-id>/modifierpromotion.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>addEtudiantToPromotion</from-outcome>
+			<to-view-id>/addetudianttopromotion.xhtml</to-view-id>
+		</navigation-case>
+
+
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/ajouterpromotion.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifierpromotion.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+
+
+
+	<!-- COURS -->
+
+	<navigation-rule>
+		<from-view-id>/cours.xhtml</from-view-id>
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>addCours</from-outcome>
+			<to-view-id>/ajoutercours.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>editCours</from-outcome>
+			<to-view-id>/modifiercours.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/ajoutercours.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifiercours.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+
+
+
+
+	<!-- ABSCENCES -> EtudiantCours -->
+
+	<navigation-rule>
+		<from-view-id>/abscences.xhtml</from-view-id>
+
+		<navigation-case>
+			<from-outcome>gestionAdministrateur</from-outcome>
+			<to-view-id>/administrateurs.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>gestionEnseignant</from-outcome>
+			<to-view-id>/enseignants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionEtudiant</from-outcome>
+			<to-view-id>/etudiants.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionCours</from-outcome>
+			<to-view-id>/cours.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>gestionAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>addAbscence</from-outcome>
+			<to-view-id>/ajouterabscence.xhtml</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>editAbscence</from-outcome>
+			<to-view-id>/modifierabscence.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/ajouterabscence.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modifierabscence.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listAbscence</from-outcome>
+			<to-view-id>/abscences.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+
+
+
 </faces-config>
+
+

@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 
-import com.intiformation.gestionecole.entity.Administrateur;
 import com.intiformation.gestionecole.entity.Adresse;
 
 public class AdresseDAO implements IGestionDAO<Adresse>{

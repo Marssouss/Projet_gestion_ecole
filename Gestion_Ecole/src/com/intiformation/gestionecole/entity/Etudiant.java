@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.faces.bean.SessionScoped;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +18,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="etudiants")
+@SessionScoped
 public class Etudiant extends Personne implements Serializable {
 //	@Id
 //	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -65,6 +67,8 @@ public class Etudiant extends Personne implements Serializable {
 		this.photo = photo;
 		this.dateDeNaissance = dateDeNaissance;
 	}
+	
+	
 
 //
 //	public List<Cours> getListeCours() {
@@ -75,6 +79,12 @@ public class Etudiant extends Personne implements Serializable {
 //	public void setListeCours(List<Cours> listeCours) {
 //		this.listeCours = listeCours;
 //	}
+
+
+	public Etudiant(Adresse adresse) {
+		super(adresse);
+		// TODO Auto-generated constructor stub
+	}
 
 
 	public String getPhoto() {

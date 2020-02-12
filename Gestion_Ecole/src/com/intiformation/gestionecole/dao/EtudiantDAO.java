@@ -98,7 +98,7 @@ public class EtudiantDAO implements IGestionDAO<Etudiant>{
 	}
 	@Override
 	public boolean remove(Etudiant etudiant) {
-
+		System.out.println("dao : etudiant -> "+etudiant);
 		EntityTransaction tx=null;
 		
 		try {

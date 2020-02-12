@@ -2,6 +2,7 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 
+import javax.faces.bean.SessionScoped;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="etudiants_cours")
+@SessionScoped
 public class EtudiantCours implements Serializable {
 	/* Propriétés */
 	@Id

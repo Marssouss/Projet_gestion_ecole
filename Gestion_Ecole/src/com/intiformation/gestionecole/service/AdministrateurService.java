@@ -39,7 +39,9 @@ public class AdministrateurService implements IGestionService<Administrateur>{
 		return administrateurDAO.remove(administrateur);
 	}
 	
-	
+	public Administrateur recupererParNom(String nom) {
+		return administrateurDAO.getByName(nom);
+	}
 	
 
 }

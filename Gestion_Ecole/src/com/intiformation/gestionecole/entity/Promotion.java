@@ -33,6 +33,12 @@ public class Promotion implements Serializable {
 			  )
 	List<Etudiant> listeEtudiants;
 	
+	@JoinTable(name="Promotion_Assos_Cours",
+			   joinColumns=@JoinColumn(name="Promotion_ID"),
+			   inverseJoinColumns=@JoinColumn(name="Cours_ID")
+			  )
+	List<Cours> listeCours;
+	
 
 	/* Constructeurs */
 	//Constructeur vide

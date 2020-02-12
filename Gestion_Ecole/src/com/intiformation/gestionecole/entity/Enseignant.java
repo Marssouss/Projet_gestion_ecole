@@ -27,6 +27,13 @@ public class Enseignant extends Personne implements Serializable {
 		super(identifiant, motDePasse, nom, prenom, email, adresse);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public Enseignant(Adresse adresse) {
+		super(adresse);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String toString() {

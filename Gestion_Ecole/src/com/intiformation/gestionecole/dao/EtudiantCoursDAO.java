@@ -5,7 +5,9 @@ import java.util.List;
 
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
+import javax.persistence.Query;
 
+import com.intiformation.gestionecole.entity.Administrateur;
 import com.intiformation.gestionecole.entity.EtudiantCours;
 
 public class EtudiantCoursDAO implements IGestionDAO<EtudiantCours>{
@@ -32,6 +34,24 @@ public class EtudiantCoursDAO implements IGestionDAO<EtudiantCours>{
 		
 		try {
 			etudiantCours=em.find(EtudiantCours.class, id);
+			return etudiantCours;
+		} catch (PersistenceException e) {
+			System.out.println("Erreur lors de la récupération de la etudiantCours");
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public EtudiantCours getByIdEtudiant(long id) {
+		EtudiantCours etudiantCours;
+		
+
+		
+		try {
+			Query query = em.createQuery("SELECT a FROM EtudiantCours a WHERE a.etudiant.idPersonne=:pIdEtudiant");
+			query.setParameter("pIdEtudiant", id);
+			etudiantCours = (EtudiantCours) query.getSingleResult();
+			System.out.println(etudiantCours);
 			return etudiantCours;
 		} catch (PersistenceException e) {
 			System.out.println("Erreur lors de la récupération de la etudiantCours");

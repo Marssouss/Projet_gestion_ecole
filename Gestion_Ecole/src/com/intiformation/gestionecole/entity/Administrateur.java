@@ -2,15 +2,13 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
+import javax.faces.bean.SessionScoped;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="administrateurs")
+@SessionScoped
 public class Administrateur extends Personne implements Serializable {
 
 	public Administrateur() {
@@ -25,6 +23,12 @@ public class Administrateur extends Personne implements Serializable {
 	public Administrateur(String identifiant, String motDePasse, String nom, String prenom, String email,
 			Adresse adresse) {
 		super(identifiant, motDePasse, nom, prenom, email, adresse);
+	}
+	
+	
+
+	public Administrateur(Adresse adresse) {
+		super(adresse);
 	}
 
 	@Override

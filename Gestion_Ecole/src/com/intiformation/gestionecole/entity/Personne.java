@@ -2,6 +2,7 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 
+import javax.faces.bean.SessionScoped;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +13,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 /**
  * @author IN-BR-015
@@ -20,6 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@SessionScoped
 public abstract class Personne implements Serializable {
 
 
@@ -92,6 +93,12 @@ public abstract class Personne implements Serializable {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
+		this.adresse = adresse;
+	}
+	
+	
+
+	public Personne(Adresse adresse) {
 		this.adresse = adresse;
 	}
 

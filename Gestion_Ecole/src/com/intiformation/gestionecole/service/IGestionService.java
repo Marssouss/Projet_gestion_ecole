@@ -10,11 +10,14 @@ public interface IGestionService<T> {
 	
 	public T recupererParId(long id);
 	
+	
 	public boolean ajouter(T object);
 	
 	public boolean modifier(T object);
 	
 	public boolean supprimer(T object);
+	
+	
 	
 
 }

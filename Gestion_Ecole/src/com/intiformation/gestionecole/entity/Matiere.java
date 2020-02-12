@@ -2,6 +2,7 @@ package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
 
+import javax.faces.bean.SessionScoped;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="matieres")
+@SessionScoped
 public class Matiere implements Serializable{
 	/* Propriétés */
 	@Id
@@ -40,6 +42,29 @@ public class Matiere implements Serializable{
 	public Matiere(String libelle) {
 		this.libelle = libelle;
 	} //end ctor chargé sans ID
+
+	
+	
+	
+	
+	
+	
+	
+	public long getIdMatiere() {
+		return idMatiere;
+	}
+
+	public void setIdMatiere(long idMatiere) {
+		this.idMatiere = idMatiere;
+	}
+
+	public String getLibelle() {
+		return libelle;
+	}
+
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
 
 	/* toString */
 	/* (non-Javadoc)

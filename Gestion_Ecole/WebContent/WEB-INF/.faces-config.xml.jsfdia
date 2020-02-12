@@ -19,9 +19,400 @@
   SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#gestion.xhtml:0" NAME="item"
    PATH="/gestion.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="listAdmin::#gestion.xhtml" NAME="output"
-    PATH="/gestion.xhtml" TARGET="rules:#gestion.xhtml"
-    TITLE="listAdmin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#administrateurs.xhtml"
+  PATH="/administrateurs.xhtml" SHAPE="32,392,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#administrateurs.xhtml:0" NAME="item"
+   PATH="/administrateurs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="addAdministrateur::#ajouteradministrateur.xhtml" NAME="output1"
+    PATH="/ajouteradministrateur.xhtml"
+    TARGET="rules:#ajouteradministrateur.xhtml"
+    TITLE="addAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="chercherAdmin::#modifieradministrateur.xhtml" NAME="output2"
+    PATH="/modifieradministrateur.xhtml"
+    TARGET="rules:#modifieradministrateur.xhtml" TITLE="chercherAdmin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editAdmin::#modifieradministrateur.xhtml"
+    NAME="output3" PATH="/modifieradministrateur.xhtml"
+    TARGET="rules:#modifieradministrateur.xhtml" TITLE="editAdmin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output4" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output5" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output6" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output7"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output8" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajouteradministrateur.xhtml"
+  PATH="/ajouteradministrateur.xhtml" SHAPE="352,264,50,25" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajouteradministrateur.xhtml:0" NAME="item"
+   PATH="/ajouteradministrateur.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listAdmin::#administrateurs.xhtml"
+    NAME="output" PATH="/administrateurs.xhtml"
+    TARGET="rules:#administrateurs.xhtml" TITLE="listAdmin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifieradministrateur.xhtml"
+  PATH="/modifieradministrateur.xhtml" SHAPE="256,369,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifieradministrateur.xhtml:0" NAME="item"
+   PATH="/modifieradministrateur.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listAdmin::#administrateurs.xhtml"
+    NAME="output" PATH="/administrateurs.xhtml"
+    TARGET="rules:#administrateurs.xhtml" TITLE="listAdmin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#enseignants.xhtml" PATH="/enseignants.xhtml"
+  SHAPE="320,577,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#enseignants.xhtml:0" NAME="item"
+   PATH="/enseignants.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addEnseignant::#ajouterenseignant.xhtml"
+    NAME="output7" PATH="/ajouterenseignant.xhtml"
+    TARGET="rules:#ajouterenseignant.xhtml" TITLE="addEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editEnseignant::#modifierenseignant.xhtml"
+    NAME="output8" PATH="/modifierenseignant.xhtml"
+    TARGET="rules:#modifierenseignant.xhtml" TITLE="editEnseignant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajouterenseignant.xhtml"
+  PATH="/ajouterenseignant.xhtml" SHAPE="576,705,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajouterenseignant.xhtml:0" NAME="item"
+   PATH="/ajouterenseignant.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listEnseignant::#enseignants.xhtml"
+    NAME="output" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="listEnseignant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#ajouterenseignant.xhtml:1" NAME="item1"
+   PATH="/ajouterenseignant.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listEnseignant::#enseignants.xhtml"
+    NAME="output" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="listEnseignant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifierenseignant.xhtml"
+  PATH="/modifierenseignant.xhtml" SHAPE="80,705,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifierenseignant.xhtml:0" NAME="item"
+   PATH="/modifierenseignant.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listEnseignant::#enseignants.xhtml"
+    NAME="output" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="listEnseignant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#etudiants.xhtml" PATH="/etudiants.xhtml"
+  SHAPE="368,145,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#etudiants.xhtml:0" NAME="item"
+   PATH="/etudiants.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addEtudiant::#ajouteretudiant.xhtml"
+    NAME="output7" PATH="/ajouteretudiant.xhtml"
+    TARGET="rules:#ajouteretudiant.xhtml" TITLE="addEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editEtudiant::#modifieretudiant.xhtml"
+    NAME="output8" PATH="/modifieretudiant.xhtml"
+    TARGET="rules:#modifieretudiant.xhtml" TITLE="editEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="infoEtudiant::#infoetudiant.xhtml"
+    NAME="output9" PATH="/infoetudiant.xhtml"
+    TARGET="rules:#infoetudiant.xhtml" TITLE="infoEtudiant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajouteretudiant.xhtml"
+  PATH="/ajouteretudiant.xhtml" SHAPE="96,305,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajouteretudiant.xhtml:0" NAME="item"
+   PATH="/ajouteretudiant.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listEtudiant::#etudiants.xhtml"
+    NAME="output" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="listEtudiant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifieretudiant.xhtml"
+  PATH="/modifieretudiant.xhtml" SHAPE="96,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifieretudiant.xhtml:0" NAME="item"
+   PATH="/modifieretudiant.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listEtudiant::#etudiants.xhtml"
+    NAME="output" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="listEtudiant" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#matieres.xhtml" PATH="/matieres.xhtml"
+  SHAPE="640,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#matieres.xhtml:0" NAME="item"
+   PATH="/matieres.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addMatiere::#ajoutermatiere.xhtml"
+    NAME="output7" PATH="/ajoutermatiere.xhtml"
+    TARGET="rules:#ajoutermatiere.xhtml" TITLE="addMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editMatiere::#modifiermatiere.xhtml"
+    NAME="output8" PATH="/modifiermatiere.xhtml"
+    TARGET="rules:#modifiermatiere.xhtml" TITLE="editMatiere" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajoutermatiere.xhtml"
+  PATH="/ajoutermatiere.xhtml" SHAPE="368,769,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajoutermatiere.xhtml:0" NAME="item"
+   PATH="/ajoutermatiere.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listMatiere::#matieres.xhtml" NAME="output"
+    PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="listMatiere" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifiermatiere.xhtml"
+  PATH="/modifiermatiere.xhtml" SHAPE="368,1121,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifiermatiere.xhtml:0" NAME="item"
+   PATH="/modifiermatiere.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listMatiere::#matieres.xhtml" NAME="output"
+    PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="listMatiere" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#promotions.xhtml" PATH="/promotions.xhtml"
+  SHAPE="368,769,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#promotions.xhtml:0" NAME="item"
+   PATH="/promotions.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addPromotion::#ajouterpromotion.xhtml"
+    NAME="output7" PATH="/ajouterpromotion.xhtml"
+    TARGET="rules:#ajouterpromotion.xhtml" TITLE="addPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editPromotion::#modifierpromotion.xhtml"
+    NAME="output8" PATH="/modifierpromotion.xhtml"
+    TARGET="rules:#modifierpromotion.xhtml" TITLE="editPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="addEtudiantToPromotion::#addetudianttopromotion.xhtml"
+    NAME="output9" PATH="/addetudianttopromotion.xhtml"
+    TARGET="rules:#addetudianttopromotion.xhtml"
+    TITLE="addEtudiantToPromotion" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajouterpromotion.xhtml"
+  PATH="/ajouterpromotion.xhtml" SHAPE="96,1409,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajouterpromotion.xhtml:0" NAME="item"
+   PATH="/ajouterpromotion.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listPromotion::#promotions.xhtml"
+    NAME="output" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="listPromotion" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifierpromotion.xhtml"
+  PATH="/modifierpromotion.xhtml" SHAPE="96,865,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifierpromotion.xhtml:0" NAME="item"
+   PATH="/modifierpromotion.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listPromotion::#promotions.xhtml"
+    NAME="output" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="listPromotion" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cours.xhtml" PATH="/cours.xhtml"
+  SHAPE="368,801,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cours.xhtml:0" NAME="item"
+   PATH="/cours.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addCours::#ajoutercours.xhtml"
+    NAME="output7" PATH="/ajoutercours.xhtml"
+    TARGET="rules:#ajoutercours.xhtml" TITLE="addCours" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajoutercours.xhtml"
+  PATH="/ajoutercours.xhtml" SHAPE="96,1937,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajoutercours.xhtml:0" NAME="item"
+   PATH="/ajoutercours.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listCours::#cours.xhtml" NAME="output"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="listCours" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifiercours.xhtml"
+  PATH="/modifiercours.xhtml" SHAPE="96,2049,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifiercours.xhtml:0" NAME="item"
+   PATH="/modifiercours.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listCours::#cours.xhtml" NAME="output"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="listCours" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#abscences.xhtml" PATH="/abscences.xhtml"
+  SHAPE="368,929,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#abscences.xhtml:0" NAME="item"
+   PATH="/abscences.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="gestionAdministrateur::#administrateurs.xhtml" NAME="output"
+    PATH="/administrateurs.xhtml" TARGET="rules:#administrateurs.xhtml"
+    TITLE="gestionAdministrateur" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEnseignant::#enseignants.xhtml"
+    NAME="output1" PATH="/enseignants.xhtml"
+    TARGET="rules:#enseignants.xhtml" TITLE="gestionEnseignant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
+    NAME="output2" PATH="/etudiants.xhtml"
+    TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output3" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
+    NAME="output4" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output5"
+    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
+    NAME="output6" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addAbscence::#ajouterabscence.xhtml"
+    NAME="output7" PATH="/ajouterabscence.xhtml"
+    TARGET="rules:#ajouterabscence.xhtml" TITLE="addAbscence" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editAbscence::#modifierabscence.xhtml"
+    NAME="output8" PATH="/modifierabscence.xhtml"
+    TARGET="rules:#modifierabscence.xhtml" TITLE="editAbscence" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ajouterabscence.xhtml"
+  PATH="/ajouterabscence.xhtml" SHAPE="96,2065,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ajouterabscence.xhtml:0" NAME="item"
+   PATH="/ajouterabscence.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listAbscence::#abscences.xhtml"
+    NAME="output" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="listAbscence" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#modifierabscence.xhtml"
+  PATH="/modifierabscence.xhtml" SHAPE="96,2433,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#modifierabscence.xhtml:0" NAME="item"
+   PATH="/modifierabscence.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listAbscence::#abscences.xhtml"
+    NAME="output" PATH="/abscences.xhtml"
+    TARGET="rules:#abscences.xhtml" TITLE="listAbscence" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#infoetudiant.xhtml"
+  PATH="/infoetudiant.xhtml" SHAPE="640,129,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#addetudianttopromotion.xhtml"
+  PATH="/addetudianttopromotion.xhtml" SHAPE="640,1889,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
