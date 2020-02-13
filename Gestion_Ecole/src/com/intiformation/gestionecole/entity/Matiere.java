@@ -1,13 +1,16 @@
 package com.intiformation.gestionecole.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.faces.bean.SessionScoped;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,6 +25,12 @@ public class Matiere implements Serializable{
 	
 	@Column(name="libelle")
 	private String libelle;
+	
+	
+	@OneToMany(mappedBy="matiere", cascade=CascadeType.ALL)
+	private List<Cours> listeCours;
+	
+	
 
 	
 	

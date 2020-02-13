@@ -55,12 +55,12 @@ public class Cours implements Serializable {
 //	@ManyToOne(cascade=CascadeType.ALL)
 //	@JoinColumn(name="Matiere_ID",referencedColumnName="id_matiere")
 	
-	@ManyToMany(cascade=CascadeType.ALL)
-	@JoinTable(name="etudiants_cours",
-			   joinColumns=@JoinColumn(name="cours_id"),
-			   inverseJoinColumns=@JoinColumn(name="etudiant_id")
-			  )
-	private List<Matiere> matiere;
+//	@ManyToMany(cascade=CascadeType.ALL)
+//	@JoinTable(name="etudiants_cours",
+//			   joinColumns=@JoinColumn(name="cours_id"),
+//			   inverseJoinColumns=@JoinColumn(name="etudiant_id")
+//			  )
+//	private List<Matiere> matiere;
 	
 //	@ManyToOne(cascade=CascadeType.ALL)
 //	@JoinColumn(name="Promotion_ID",referencedColumnName="id_promotion")
@@ -71,6 +71,12 @@ public class Cours implements Serializable {
 			   inverseJoinColumns=@JoinColumn(name="etudiant_id")
 			  )
 	private List<Promotion> promotion;
+	
+	
+	//Association avec "Matiere"
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="matiere_id", referencedColumnName="id_matiere")
+	private Matiere matiere;
 
 	/* Constructeurs */
 	//Constructeur vide
