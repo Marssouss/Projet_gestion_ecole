@@ -77,6 +77,11 @@ public class Cours implements Serializable {
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="matiere_id", referencedColumnName="id_matiere")
 	private Matiere matiere;
+	
+	//Association avec "Promotion"
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="promotion_id", referencedColumnName="id_promotion")
+	private Promotion promo;
 
 	/* Constructeurs */
 	//Constructeur vide

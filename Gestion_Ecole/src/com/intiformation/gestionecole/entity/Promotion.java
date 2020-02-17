@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -39,6 +41,10 @@ public class Promotion implements Serializable {
 			  )
 	List<Cours> listeCours;
 	
+	//Association avec Cours
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="cours_id", referencedColumnName="id_cours")
+	List<Cours> listeCoursPromo;
 
 	/* Constructeurs */
 	//Constructeur vide
