@@ -24,7 +24,7 @@ public class EtudiantCoursService implements IGestionService<EtudiantCours>{
 		return etudiantCoursDAO.getById(id);
 	}
 	
-	public EtudiantCours recupererParIdEtudiant(long id) {
+	public List<EtudiantCours> recupererParIdEtudiant(long id) {
 		return etudiantCoursDAO.getByIdEtudiant(id);
 	}
 

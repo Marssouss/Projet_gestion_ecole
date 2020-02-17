@@ -42,16 +42,17 @@ public class EtudiantCoursDAO implements IGestionDAO<EtudiantCours>{
 		return null;
 	}
 	
-	public EtudiantCours getByIdEtudiant(long id) {
-		EtudiantCours etudiantCours;
+	public List<EtudiantCours> getByIdEtudiant(long id) {
+		List<EtudiantCours> etudiantCours;
+		System.out.println("DAO -> "+id);
 		
 
 		
 		try {
 			Query query = em.createQuery("SELECT a FROM EtudiantCours a WHERE a.etudiant.idPersonne=:pIdEtudiant");
 			query.setParameter("pIdEtudiant", id);
-			etudiantCours = (EtudiantCours) query.getSingleResult();
-			System.out.println(etudiantCours);
+			etudiantCours = query.getResultList();
+			System.out.println("DAO -> "+etudiantCours);
 			return etudiantCours;
 		} catch (PersistenceException e) {
 			System.out.println("Erreur lors de la récupération de la etudiantCours");

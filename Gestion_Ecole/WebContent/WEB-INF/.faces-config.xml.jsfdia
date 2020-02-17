@@ -68,11 +68,12 @@
    <PROCESS-ITEM-OUTPUT ID="gestionEtudiant::#etudiants.xhtml"
     NAME="output5" PATH="/etudiants.xhtml"
     TARGET="rules:#etudiants.xhtml" TITLE="gestionEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="gestionPromotion::#promotions.xhtml"
+    NAME="output6" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="gestionPromotion" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT ID="gestionMatiere::#matieres.xhtml"
-    NAME="output6" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    NAME="output7" PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
     TITLE="gestionMatiere" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="gestionCours::#cours.xhtml" NAME="output7"
-    PATH="/cours.xhtml" TARGET="rules:#cours.xhtml" TITLE="gestionCours" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT ID="gestionAbscence::#abscences.xhtml"
     NAME="output8" PATH="/abscences.xhtml"
     TARGET="rules:#abscences.xhtml" TITLE="gestionAbscence" model-entity="JSFProcessItemOutput"/>
@@ -184,9 +185,10 @@
    <PROCESS-ITEM-OUTPUT ID="editEtudiant::#modifieretudiant.xhtml"
     NAME="output8" PATH="/modifieretudiant.xhtml"
     TARGET="rules:#modifieretudiant.xhtml" TITLE="editEtudiant" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="infoEtudiant::#infoetudiant.xhtml"
-    NAME="output9" PATH="/infoetudiant.xhtml"
-    TARGET="rules:#infoetudiant.xhtml" TITLE="infoEtudiant" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="absenceEtudiant::#addabscencetoetudiant.xhtml" NAME="output9"
+    PATH="/addabscencetoetudiant.xhtml"
+    TARGET="rules:#addabscencetoetudiant.xhtml" TITLE="absenceEtudiant" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#ajouteretudiant.xhtml"
@@ -238,6 +240,9 @@
    <PROCESS-ITEM-OUTPUT ID="editMatiere::#modifiermatiere.xhtml"
     NAME="output8" PATH="/modifiermatiere.xhtml"
     TARGET="rules:#modifiermatiere.xhtml" TITLE="editMatiere" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addCoursToMatiere::#addcourstomatiere.xhtml"
+    NAME="output9" PATH="/addcourstomatiere.xhtml"
+    TARGET="rules:#addcourstomatiere.xhtml" TITLE="addCoursToMatiere" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#ajoutermatiere.xhtml"
@@ -342,6 +347,9 @@
    <PROCESS-ITEM-OUTPUT ID="addCours::#ajoutercours.xhtml"
     NAME="output7" PATH="/ajoutercours.xhtml"
     TARGET="rules:#ajoutercours.xhtml" TITLE="addCours" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editCours::#modifiercours.xhtml"
+    NAME="output8" PATH="/modifiercours.xhtml"
+    TARGET="rules:#modifiercours.xhtml" TITLE="editCours" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#ajoutercours.xhtml"
@@ -411,8 +419,24 @@
     TARGET="rules:#abscences.xhtml" TITLE="listAbscence" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#infoetudiant.xhtml"
-  PATH="/infoetudiant.xhtml" SHAPE="640,129,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM NAME="rules:#addetudianttopromotion.xhtml"
-  PATH="/addetudianttopromotion.xhtml" SHAPE="640,1889,0,0" model-entity="JSFProcessGroup"/>
+  PATH="/addetudianttopromotion.xhtml" SHAPE="640,1889,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#addetudianttopromotion.xhtml:0" NAME="item"
+   PATH="/addetudianttopromotion.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listPromotion::#promotions.xhtml"
+    NAME="output" PATH="/promotions.xhtml"
+    TARGET="rules:#promotions.xhtml" TITLE="listPromotion" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#addcourstomatiere.xhtml"
+  PATH="/addcourstomatiere.xhtml" SHAPE="1184,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#addcourstomatiere.xhtml:0" NAME="item"
+   PATH="/addcourstomatiere.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="listMatiere::#matieres.xhtml" NAME="output"
+    PATH="/matieres.xhtml" TARGET="rules:#matieres.xhtml"
+    TITLE="listMatiere" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#addabscencetoetudiant.xhtml"
+  PATH="/addabscencetoetudiant.xhtml" SHAPE="640,129,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

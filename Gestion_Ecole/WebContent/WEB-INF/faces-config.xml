@@ -284,9 +284,13 @@
 		</navigation-case>
 
 		<navigation-case>
-			<from-outcome>infoEtudiant</from-outcome>
-			<to-view-id>/infoetudiant.xhtml</to-view-id>
+			<from-outcome>absenceEtudiant</from-outcome>
+			<to-view-id>/addabscencetoetudiant.xhtml</to-view-id>
 		</navigation-case>
+		
+		
+		
+		
 
 	</navigation-rule>
 
@@ -362,6 +366,19 @@
 			<to-view-id>/modifiermatiere.xhtml</to-view-id>
 		</navigation-case>
 
+		<navigation-case>
+			<from-outcome>addCoursToMatiere</from-outcome>
+			<to-view-id>/addcourstomatiere.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/addcourstomatiere.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listMatiere</from-outcome>
+			<to-view-id>/matieres.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
 
 
@@ -445,6 +462,14 @@
 		</navigation-case>
 
 
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/addetudianttopromotion.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listPromotion</from-outcome>
+			<to-view-id>/promotions.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
 
 

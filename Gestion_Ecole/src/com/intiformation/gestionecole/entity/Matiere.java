@@ -75,6 +75,14 @@ public class Matiere implements Serializable{
 		this.libelle = libelle;
 	}
 
+	public List<Cours> getListeCours() {
+		return listeCours;
+	}
+
+	public void setListeCours(List<Cours> listeCours) {
+		this.listeCours = listeCours;
+	}
+
 	/* toString */
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
